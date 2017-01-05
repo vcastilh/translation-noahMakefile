@@ -1,5 +1,6 @@
 ---
 layout: layout
+permalink: /projects/
 ---
 Here are some of the projects i'm currently working on:
 
