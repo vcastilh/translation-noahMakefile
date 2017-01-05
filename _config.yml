@@ -18,6 +18,8 @@ email: noahloomans@gmail.com
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://noahloomans.com" # the base hostname & protocol for your site, e.g. http://example.com
 
+include: [".well-known"]
+
 # Build settings
 markdown: kramdown
 
