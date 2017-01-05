@@ -20,11 +20,6 @@ url: "http://noahloomans.com" # the base hostname & protocol for your site, e.g.
 
 # Build settings
 markdown: kramdown
-gems:
-  - jekyll-feed
-exclude:
-  - Gemfile
-  - Gemfile.lock
 
 sass:
     sass_dir: style
