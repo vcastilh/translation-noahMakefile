@@ -1,25 +1,28 @@
-# This file is a template, and might need editing before it works on your project.
-# Full project: https://gitlab.com/pages/jekyll
-image: ruby:2.3
+image: ruby:2.3  # Use Ruby Docker image
+
+cache:  # Add Bundler cache to 'vendor' directory
+  paths:
+    - vendor/
+
+before_script:  # Install Gems to 'vendor' directory
+  - bundle install --path vendor
 
 test:
   stage: test
-  script:
-  - gem install jekyll
-  - jekyll build -d test
-  artifacts:
+  script:  # Generate test site(s) into 'test' directory
+  - bundle exec jekyll build -d test
+  artifacts:  # Save a zipped version for download
     paths:
     - test
-  except:
+  except:  # Execute for all branches except master
   - master
 
 pages:
   stage: deploy
-  script:
-  - gem install jekyll
-  - jekyll build -d public
-  artifacts:
+  script:  # Generate public site and deploy
+  - bundle exec jekyll build -d public
+  artifacts:  # Save a zipped version for download
     paths:
     - public
-  only:
+  only:  # Only deploy the master branch
   - master
