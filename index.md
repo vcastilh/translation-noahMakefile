@@ -10,5 +10,5 @@ progress.
 # Contact
 If you wish to contect me please send me an email at
 [noahloomans@gmail.com](mailto:noahloomans@gmail.com). And here is my
-[PGP key](http://pgp.mit.edu/pks/lookup?op=get&search=0x8B2375F3B367DF6D) if
+[PGP key](https://pgp.mit.edu/pks/lookup?op=get&search=0x8B2375F3B367DF6D) if
 your into that sort of thing.
