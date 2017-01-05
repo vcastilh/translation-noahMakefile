@@ -3,6 +3,10 @@
 
 @import 'normalize';
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: #31363b;
   font-family: 'Roboto Mono', monospace;
@@ -95,5 +99,37 @@ main ul {
       top: 0;
       left: 0;
     }
+  }
+}
+
+.projects {
+  display: flex;
+
+  .project {
+    padding: 8px;
+    color: black;
+    text-decoration: none;
+    background-color: #93a1a1;
+    margin: 8px;
+    outline: none;
+
+    &:hover, &:focus {
+      background-color: #b8c5c5;
+    }
+
+    img {
+      width: 100%;
+    }
+    
+    header {
+      padding: 8px;
+      font-style: italic;
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .projects {
+    flex-wrap: wrap;
   }
 }
