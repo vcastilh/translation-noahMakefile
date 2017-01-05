@@ -80,3 +80,20 @@ h2::before {
 h3::before {
   content: '### ';
 }
+
+main ul {
+  padding: 0;
+
+  li {
+    list-style: none;
+    padding-left: 30px;
+    position: relative;
+
+    &::before {
+      content: "\00a0- ";
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+}
