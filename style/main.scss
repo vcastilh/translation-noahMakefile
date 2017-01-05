@@ -37,9 +37,13 @@ nav {
 
   ul {
     display: flex;
-    justify-content: center;
     margin: 0;
     padding: 0;
+  }
+
+  ul::before, ul::after {
+    content: '';
+    margin: auto;
   }
 
   li {
