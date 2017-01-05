@@ -1,0 +1,24 @@
+---
+---
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+  <body>
+    {% include header.html %}
+    <div class="page">
+      <nav>
+        <ul>
+          <li><a href="/">About</a></li>
+          <li class='seperator'>•</li>
+          <li><a href="/projects/">Projects</a></li>
+          <li class='seperator'>•</li>
+          <li><a href="/blog/">Blog</a></li>
+        </ul>
+      </nav>
+      <main>
+        {{ content }}
+      </main>
+    </div>
+    {% include footer.html %}
+  </body>
+</html>
