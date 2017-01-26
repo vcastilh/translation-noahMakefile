@@ -30,6 +30,7 @@ main, footer {
 
 main {
   margin-top: 32px;
+  line-height: 20px;
 }
 
 footer {
@@ -37,4 +38,14 @@ footer {
   font-style: italic;
   padding-top: 16px;
   padding-bottom: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: #1a0dab;
+  outline: none;
+
+  &:hover, &:focus {
+    background-color: #ececec;
+  }
 }

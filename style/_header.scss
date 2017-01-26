@@ -18,13 +18,13 @@ header {
       border-image-repeat: round;
       border-width: 0  8px 0 0;
       margin-top: 32px;
-      width: 50%;
+      width: calc(50% + 4px);
       flex-grow: 1;
     }
-  }
 
-  a {
-    text-decoration: none;
+    a:hover {
+      background-color: inherit;
+    }
   }
 
   .logo {
