@@ -1,148 +1,40 @@
 ---
 ---
 
+$page-width: 840px;
+$logo-width: 150px;
+$page-padding-between: 40px;
+
 @import 'normalize';
+@import 'header';
+@import 'markdown';
+@import 'projects';
+@import 'responsive';
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  background-color: #31363b;
   font-family: 'Roboto Mono', monospace;
   margin: 16px;
+  color: #212121;
   word-wrap: break-word;
 }
 
-.logo {
-  background-image: url(/assets/logo.png);
-  height: 144px;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: contain;
-  zoom: 0.6;
-  margin-top: 64px;
-  margin-bottom: 64px;
-}
-
-.page {
-  max-width: 700px;
+main, footer {
+  padding-left: $logo-width + $page-padding-between;
+  max-width: $page-width;
   margin: 0 auto;
-  background-color: white;
-}
-
-nav {
-  background-color: #93a1a1;
-  overflow-y: auto;
-
-  ul {
-    display: flex;
-    margin: 0;
-    padding: 0;
-  }
-
-  ul::before, ul::after {
-    content: '';
-    margin: auto;
-  }
-
-  li {
-    list-style: none;
-    padding: 8px;
-
-    a {
-      text-decoration: none;
-      color: black;
-      padding: 8px;
-      display: inline-block;
-      &:hover, &:focus {
-        background-color: #b8c5c5;
-        outline: none;
-      }
-    }
-  }
-
-  li.seperator {
-    padding: 16px;
-    display: inline-block;
-  }
 }
 
 main {
-  padding: 16px;
-}
-
-h1, h2, h3 {
-  font-size: 1em;
-  font-weight: bold;
-}
-
-h1::before {
-  content: '# ';
-}
-
-h2::before {
-  content: '## ';
-}
-
-h3::before {
-  content: '### ';
-}
-
-main ul {
-  padding: 0;
-
-  li {
-    list-style: none;
-    padding-left: 30px;
-    position: relative;
-
-    &::before {
-      content: "\00a0- ";
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-  }
-}
-
-.projects {
-  display: flex;
-
-  .project {
-    padding: 8px;
-    color: black;
-    text-decoration: none;
-    background-color: #93a1a1;
-    margin: 8px;
-    outline: none;
-
-    &:hover, &:focus {
-      background-color: #b8c5c5;
-    }
-
-    img {
-      width: 100%;
-    }
-    
-    header {
-      padding: 8px;
-      font-style: italic;
-    }
-  }
-}
-
-@media screen and (max-width: 425px) {
-  .projects {
-    flex-wrap: wrap;
-  }
+  margin-top: 32px;
 }
 
 footer {
-  color: rgba(147, 161, 161, 0.5);
-  font-size: 0.8em;
-  max-width: 300px;
-  margin: 0 auto;
-  margin-top: 16px;
-  padding: 16px;
+  color: #757575;
+  font-style: italic;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }

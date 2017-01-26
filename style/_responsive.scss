@@ -1,0 +1,25 @@
+@media screen and (max-width: 750px) {
+  main, footer {
+    padding-left: 0 !important;
+  }
+
+  .dotted-line {
+    display: none;
+  }
+
+  header {
+    .logo {
+      width: 100px;
+      height: 100px;
+    }
+
+    .title {
+      height: 100px;
+      padding-left: 140px;
+    }
+
+    .logo-container {
+      position: absolute;
+    }
+  }
+}

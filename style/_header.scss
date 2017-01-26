@@ -1,0 +1,48 @@
+header {
+  display: flex;
+  max-width: $page-width;
+  margin: 0 auto;
+
+  .logo-container {
+    max-width: $page-width;
+    height: 100%;
+    margin: 0 auto;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+
+    .dotted-line {
+      border-style: dotted;
+      border-image-source: url('/assets/dots.svg');
+      border-image-slice: 33% 33%;
+      border-image-repeat: round;
+      border-width: 0  8px 0 0;
+      margin-top: 32px;
+      width: 50%;
+      flex-grow: 1;
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .logo {
+    width: $logo-width;
+    height: $logo-width;
+    border-radius: 50%;
+  }
+
+  .title {
+    padding-left: $logo-width + $page-padding-between;
+    height: $logo-width;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .name {
+      font-weight: bold;
+      font-size: 1.5em;
+    }
+  }
+}
