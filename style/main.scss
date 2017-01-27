@@ -38,6 +38,14 @@ footer {
   font-style: italic;
   padding-top: 16px;
   padding-bottom: 16px;
+
+  a {
+    color: inherit;
+    &:hover, &:focus {
+      background-color: inherit;
+      text-decoration: underline;
+    }
+  }
 }
 
 a {
