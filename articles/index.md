@@ -1,5 +1,6 @@
 ---
 layout: layout
+permalink: /
 ---
 Hi,
 
