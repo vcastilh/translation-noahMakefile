@@ -28,6 +28,6 @@ in random order.
 Compare that to this version where you simply type your student id in a search
 box.
 
-The second on, Manager wonder stress, is a website I made for my father. And
+The second on, Manager zonder stress, is a website I made for my father. And
 while I personally don’t like how it came out, I did get some valuable
 experience of working with a boss.
