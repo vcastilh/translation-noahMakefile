@@ -1,0 +1,54 @@
+==================================================================
+https://keybase.io/nloomans
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://noahloomans.com
+  * I am nloomans (https://keybase.io/nloomans) on keybase.
+  * I have a public key ASCGTY3kKOnBWQEeLYhVSHMuK7K2B5Z0QWsYsfyTwsQMIgo
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0101bbdb28841b169de6538a51d17ca94b30088ba2914e56fd19121eec05f7a389cc0a",
+            "host": "keybase.io",
+            "kid": "0120864d8de428e9c159011e2d885548732e2bb2b6079674416b18b1fc93c2c40c220a",
+            "uid": "7a52ddabf92293dd59f8fbf3774ea319",
+            "username": "nloomans"
+        },
+        "service": {
+            "hostname": "noahloomans.com",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "client": {
+        "name": "keybase.io go client",
+        "version": "1.0.20"
+    },
+    "ctime": 1491985034,
+    "expire_in": 504576000,
+    "merkle_root": {
+        "ctime": 1491984890,
+        "hash": "6103df974bc3d0bdedf6312da0c5160495ed2ddfd4490df66a2e948e8b47f11bf12e43e6fc1fd55e7f92088dd4f86c1fb361c2f859318e2563a53f641a880b0c",
+        "seqno": 1014399
+    },
+    "prev": "48a37bc8cf7579b59320ae89778e3808ecd802a89b7907bc96156641448ff9a3",
+    "seqno": 16,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEghk2N5CjpwVkBHi2IVUhzLiuytgeWdEFrGLH8k8LEDCIKp3BheWxvYWTFAvl7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTAxYmJkYjI4ODQxYjE2OWRlNjUzOGE1MWQxN2NhOTRiMzAwODhiYTI5MTRlNTZmZDE5MTIxZWVjMDVmN2EzODljYzBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwODY0ZDhkZTQyOGU5YzE1OTAxMWUyZDg4NTU0ODczMmUyYmIyYjYwNzk2NzQ0MTZiMThiMWZjOTNjMmM0MGMyMjBhIiwidWlkIjoiN2E1MmRkYWJmOTIyOTNkZDU5ZjhmYmYzNzc0ZWEzMTkiLCJ1c2VybmFtZSI6Im5sb29tYW5zIn0sInNlcnZpY2UiOnsiaG9zdG5hbWUiOiJub2FobG9vbWFucy5jb20iLCJwcm90b2NvbCI6Imh0dHBzOiJ9LCJ0eXBlIjoid2ViX3NlcnZpY2VfYmluZGluZyIsInZlcnNpb24iOjF9LCJjbGllbnQiOnsibmFtZSI6ImtleWJhc2UuaW8gZ28gY2xpZW50IiwidmVyc2lvbiI6IjEuMC4yMCJ9LCJjdGltZSI6MTQ5MTk4NTAzNCwiZXhwaXJlX2luIjo1MDQ1NzYwMDAsIm1lcmtsZV9yb290Ijp7ImN0aW1lIjoxNDkxOTg0ODkwLCJoYXNoIjoiNjEwM2RmOTc0YmMzZDBiZGVkZjYzMTJkYTBjNTE2MDQ5NWVkMmRkZmQ0NDkwZGY2NmEyZTk0OGU4YjQ3ZjExYmYxMmU0M2U2ZmMxZmQ1NWU3ZjkyMDg4ZGQ0Zjg2YzFmYjM2MWMyZjg1OTMxOGUyNTYzYTUzZjY0MWE4ODBiMGMiLCJzZXFubyI6MTAxNDM5OX0sInByZXYiOiI0OGEzN2JjOGNmNzU3OWI1OTMyMGFlODk3NzhlMzgwOGVjZDgwMmE4OWI3OTA3YmM5NjE1NjY0MTQ0OGZmOWEzIiwic2Vxbm8iOjE2LCJ0YWciOiJzaWduYXR1cmUifaNzaWfEQJAz2JabxlCoM0mwlbhnEx3UqLNb/up4pKVXMd6gOFAhWMAO41cWrh2jQvXNM3VyYYD/mcCPkWS0cEjH4cn0aAaoc2lnX3R5cGUgpGhhc2iCpHR5cGUIpXZhbHVlxCA0vr2246/dWfr1NxwZ19jb/TFSMRzx4ByM7xNqDqOxKaN0YWfNAgKndmVyc2lvbgE=
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/nloomans
+
+==================================================================
