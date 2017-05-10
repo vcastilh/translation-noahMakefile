@@ -1,0 +1,79 @@
+---
+layout: slides
+title: Security
+scripts: [ ./script.js ]
+styles: [ ../reveal.js/theme/blood.css, ../reveal.js/zenburn.css, ./style.css ]
+---
+<div class="reveal">
+  <div class="slides">
+    <section>
+      <h1>XSS Injections</h1>
+      <div class="profile">
+        <img src="/assets/face.jpg" alt="Noah Loomans">
+        <div class="info">
+          <div class="name">Noah Loomans</div>
+          <div class="pgp-key">67B0 295A C271 345D 0706 4B9B 8B23 75F3 B367 DF6D</div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h2>Cross Site Scripting</h2>
+    </section>
+    <section>
+      <h2>Sample Code</h2>
+      <pre><code class="hljs" data-trim contenteditable>
+&lt;?php
+
+$sql = "SELECT comment FROM comments";
+$result = $conn->query($sql);
+
+// output data of each row
+while($row = $result->fetch_assoc()) {
+    echo $row["comment"] . "&lt;br&gt;";
+}
+
+?&gt;
+			</code></pre>
+    </section>
+    <section>
+      <h2>What if I enter <code>&lt;b&gt;hello&lt;/b&gt;</code>?</h2>
+    </section>
+    <section>
+      <pre><code class="hljs html" data-trim data-noescape contenteditable>
+&lt;p class="comments"&gt;
+<span class="fragment">This sucks&lt;br&gt;</span>
+<span class="fragment">First!&lt;br&gt;</span>
+<span class="fragment"><mark>&lt;b&gt;hello.&lt;/b&gt;&lt;br&gt;</mark></span>
+&lt;/p&gt;̿
+			</code></pre>
+    </section>
+    <section data-background-image="https://keybase.io/images/blog/zcash/evil.png">
+      <h1><code>&lt;script&gt;</code></h1>
+    </section>
+    <section>
+      <h2>Sample Code</h2>
+      <pre><code class="hljs" data-trim data-noescape contenteditable>
+&lt;?php
+
+$sql = "SELECT comment FROM comments";
+$result = $conn->query($sql);
+
+// output data of each row
+while($row = $result->fetch_assoc()) {
+  echo <span class="fragment" data-fragment-index="2"><mark>htmlspecialchars(</mark></span>$row["comment"]<span class="fragment" data-fragment-index="2"><mark>);</mark></span> . "&lt;br&gt;";
+}
+
+?&gt;
+      </code></pre>
+      <p class="fragment" data-fragment-index="1">
+        Source: <a href="https://www.w3schools.com/php/php_mysql_select.asp">w3schools</a>
+      </p>
+    </section>
+    <section>
+      <h1><code class="hljs">&lt;</code> -> <code class="hljs">&amp;lt;</code></h1>
+    </section>
+    <section>
+      https://hack-challange-nloomans.c9users.io/
+    </section>
+  </div>
+</div>
