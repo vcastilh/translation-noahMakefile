@@ -1,0 +1,62 @@
+body.random-project {
+  margin: 0;
+}
+
+.random-project__header {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+
+  .logo img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-left: 32px;
+  }
+
+  .text {
+    margin-left: 32px;
+    font-size: 2em;
+  }
+
+  a {
+    margin-right: 32px;
+    border: 1px #1a0dab solid;
+    border-radius: 4px;
+    padding: 16px 32px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .random-project__header {
+    .logo img {
+      width: 60px;
+      height: 60px;
+    }
+
+    .text {
+      font-size: 1.5em;
+    }
+  }
+}
+
+@media screen and (max-width: 625px) {
+  .random-project__header {
+    .text {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .random-project__header {
+    .logo, .text, .grow {
+      display: none;
+    }
+
+    a {
+      margin: 0 auto;
+    }
+  }
+}
