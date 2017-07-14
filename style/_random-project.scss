@@ -1,5 +1,8 @@
 body.random-project {
   margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .random-project__header {
@@ -60,3 +63,6 @@ body.random-project {
     }
   }
 }
+
+// import the style sheet of all the random projects
+@import '../random-project/bad-password-generator/style.scss';

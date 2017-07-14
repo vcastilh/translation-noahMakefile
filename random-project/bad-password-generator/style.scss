@@ -1,0 +1,18 @@
+.random-project__project__bad-password-generator {
+  text-align: center;
+  flex-grow: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  #changing-passwd {
+    font-weight: bold;
+    font-size: 5em;
+    text-transform: capitalize;
+  }
+
+  .text {
+    margin-top: -64px;
+  }
+}
