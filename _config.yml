@@ -25,3 +25,5 @@ markdown: kramdown
 
 sass:
     sass_dir: style
+
+google_analytics: UA-83684754-4
