@@ -6,6 +6,8 @@
   flex-direction: column;
   justify-content: center;
 
+  margin: 32px;
+
   #changing-passwd {
     font-weight: bold;
     font-size: 5em;
@@ -14,5 +16,21 @@
 
   .text {
     margin-top: -64px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .random-project__project__bad-password-generator {
+    #changing-passwd {
+      font-size: 3em;
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .random-project__project__bad-password-generator {
+    #changing-passwd {
+      font-size: 2em;
+    }
   }
 }
