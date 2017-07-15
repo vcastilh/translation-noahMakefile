@@ -4,9 +4,11 @@ permalink: /
 ---
 Hi,
 
-I'm Noah Loomans and this is my personal website, as of now i'm 17. Feel free
-to look around, but don't expect much as this website is still a work in
-progress.
+I'm a programmer, mostly a web developer, but I'm in love with robotics as well.
+I just like to code stuff. Take a look at the [projects page](/projects/) to see
+the stuff I've been working on. I'm currently a 17 year old student at
+[Metis Montessori Lyceum](http://hetmml.nl/), and I currently have a job at
+241SoftwareSolutions.
 
 # Contact
 If you wish to contact me please send me an email at
