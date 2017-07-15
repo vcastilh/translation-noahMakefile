@@ -24,13 +24,13 @@ body {
   word-wrap: break-word;
 }
 
-main, footer {
+.page main, footer {
   padding-left: $logo-width + $page-padding-between;
   max-width: $page-width;
   margin: 0 auto;
 }
 
-main {
+.page main {
   margin-top: 32px;
   line-height: 20px;
 }
