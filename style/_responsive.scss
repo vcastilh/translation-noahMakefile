@@ -9,12 +9,11 @@
 
   header {
     .logo {
-      width: 100px;
-      height: 100px;
+      width: $logo-width-small;
+      height: $logo-width-small;
     }
 
     .title {
-      height: 100px;
       padding-left: 140px;
     }
 
