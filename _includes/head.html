@@ -17,11 +17,13 @@
   <link rel="icon" type="image/png" href="/assets/icons/favicon-32x32.png" sizes="32x32">
   <link rel="icon" type="image/png" href="/assets/icons/favicon-16x16.png" sizes="16x16">
 
-  {% if page.twitter %}
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:site" content="@noahloomans" />
-  <meta name="twitter:title" content="{{ page.twitter.title }}" />
-  <meta name="twitter:description" content="{{ page.twitter.description }}" />
+  {% if page.info %}
+    <meta name="og:title" content="{{ page.info.title }}" />
+    <meta name="og:description" content="{{ page.info.description }}">
+
+    {% if page.info.image %}
+      <meta property="og:image" content="{{ page.info.image }}" />
+    {% endif %}
   {% endif %}
 
   {% if site.google_analytics %}
