@@ -28,6 +28,8 @@ function terminalType(prefix, text) {
     return wait(500).then(() => type(text, line));
 }
 
+document.querySelector('.terminal').textContent = '';
+
 Promise.resolve()
     .then(() => terminalType('noah@loomans ~ $ ', 'cd Code/calculate_age'))
     .then(() => terminalType('noah@loomans ~/Code/calculate_age $ ', 'gcc calculate_age.c -o calculate_age'))
