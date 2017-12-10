@@ -1,7 +1,3 @@
-/**
- *
- */
-
 function wait(ms) {
     return new Promise((resolve) => {
         window.setTimeout(resolve, ms);
@@ -58,6 +54,11 @@ function resize() {
     const size = Math.min(window.innerWidth, window.innerHeight);
     const factor = size / 1080;
     document.documentElement.style.setProperty('--factor', factor);
+}
+
+if (window.location.hash === '#escape') {
+    document.querySelector('#escape-room').style.display = 'block';
+    document.querySelector('#no-escape-room').style.display = 'none';
 }
 
 resize();
