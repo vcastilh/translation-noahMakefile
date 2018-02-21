@@ -1,0 +1,56 @@
+.profile {
+  background-color: rgba(0, 0, 0, 0.8);;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  max-width: 650px;
+  margin: 0 auto !important;
+}
+
+.profile img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin: 16px !important;
+}
+
+.profile .info {
+  margin: 16px;
+  text-align: left;
+}
+
+.profile .pgp-key {
+  font-family: "Roboto Mono";
+  font-size: 15px;
+  color: gray;
+}
+
+#blockchain {
+  display: flex !important;
+  width: 960px;
+  height: 600px;
+  flex-direction: column;
+  justify-content: end;
+}
+
+#blockchain pre {
+  box-shadow: initial;
+  line-height: 1em;
+  margin: 0 auto;
+  padding: 5px 0;
+  animation: appear 1s;
+}
+
+#blockchain pre.header {
+  font-weight: bold;
+}
+
+@keyframes appear {
+  from {
+    background-color: #91971b;
+  }
+
+  to {
+    background-color: #222;
+  }
+}
