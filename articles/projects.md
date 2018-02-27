@@ -10,11 +10,11 @@ and I really enjoy making them, here are some of my favorites:
 
 <div class="projects">
   <a class="project" href="http://rooster.hetmml.nl" target="_black" rel="noopener">
-    <img src="/assets/projects/rooster.hetmml.nl.png" alt="rooster.hetmml.nl homepage">
+    <img src="{{ "/assets/projects/rooster.hetmml.nl.png" | relativize_url }}" alt="rooster.hetmml.nl homepage">
     <header>Metis Rooster</header>
   </a>
   <a class="project" href="http://managerzonderstress.nl" target="_black" rel="noopener">
-    <img src="/assets/projects/managerzonderstress.nl.png" alt="managerzonderstress.nl homepage">
+    <img src="{{ "/assets/projects/managerzonderstress.nl.png" | relativize_url }}" alt="managerzonderstress.nl homepage">
     <header>Manager zonder stress</header>
   </a>
 </div>

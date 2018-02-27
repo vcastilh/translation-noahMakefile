@@ -1,16 +1,15 @@
-{% include relBase.html %}
 <head>
   <meta charset="utf-8">
   <title>Noah Loomans</title>
   <meta name="theme-color" content="#ffffff">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="{{relBase}}style/main.css">
+  <link rel="stylesheet" href="{{ "/style/main.css" | relativize_url }}">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
 
   <!-- sigh... favicon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="{{relBase}}assets/icons/apple-touch-icon.png">
-  <link rel="icon" type="image/png" href="{{relBase}}assets/icons/favicon-32x32.png" sizes="32x32">
-  <link rel="icon" type="image/png" href="{{relBase}}assets/icons/favicon-16x16.png" sizes="16x16">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ "/assets/icons/apple-touch-icon.png" | relativize_url }}">
+  <link rel="icon" type="image/png" href="{{ "/assets/icons/favicon-32x32.png" | relativize_url }}" sizes="32x32">
+  <link rel="icon" type="image/png" href="{{ "/assets/icons/favicon-16x16.png" | relativize_url }}" sizes="16x16">
 
   {% if page.info %}
     <meta name="og:title" content="{{ page.info.title }}" />

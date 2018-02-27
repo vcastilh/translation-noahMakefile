@@ -1,8 +1,7 @@
-{% include relBase.html %}
 <header>
   <div class="logo-container">
-    <a href="{{relBase}}">
-      <img src="{{relBase}}assets/face.jpg" alt="Noah Loomans" class="logo">
+    <a href="{{ "/" | relativize_url }}">
+      <img src="{{ "/assets/face.jpg" | relativize_url }}" alt="Noah Loomans" class="logo">
     </a>
     <div class="dotted-line"></div>
   </div>
@@ -11,10 +10,10 @@
     <div class="menu">
       <ul class='no-markdown'>
         <li>const menu = [</li>
-        <li><a href="{{relBase}}">'Home'</a>,</li>
-        <li><a href="{{relBase}}projects/">'Projects'</a>,</li>
-        <li><a href="{{relBase}}random-projects/">'Random Projects'</a>,</li>
-        <li><a href="{{relBase}}badges/">'Badges'</a></li>
+        <li><a href="{{ "/" | relativize_url }}">'Home'</a>,</li>
+        <li><a href="{{ "/projects/" | relativize_url }}">'Projects'</a>,</li>
+        <li><a href="{{ "/random-projects/" | relativize_url }}">'Random Projects'</a>,</li>
+        <li><a href="{{ "/badges/" | relativize_url }}">'Badges'</a></li>
         <li>]</li>
       </ul></div>
   </div>
