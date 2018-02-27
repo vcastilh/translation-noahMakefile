@@ -1,14 +1,17 @@
-const web3 = new Web3(new Web3.providers.HttpProvider('http://95.85.1.235:8545'));
+const web3 = new Web3(new Web3.providers.HttpProvider('http://80.61.192.39:8545'));
 
 Reveal.initialize({
   history: true,
   backgroundTransition: 'slide'
 })
 
-function addToSlide(data, isHeader) {
+function addToSlide(data, isHeader, isToRobot) {
   const pre = document.createElement('pre');
   if (isHeader) {
     pre.classList.add('header');
+  }
+  if (isToRobot) {
+    pre.classList.add('robot');
   }
   pre.textContent = data;
 
@@ -39,6 +42,7 @@ filter.watch((err, blockHash) => {
     }
 
     const humanReadableValue = web3.fromWei(transaction.value, 'ether').toString();
-    addToSlide(`${compactStr(transaction.from)} -> ${humanReadableValue} ETHER -> ${compactStr(transaction.to)}`);
+    const isToRobot = transaction.to === '0x5bcd404e6b96dfd033bd362d0f947753d5fb1f57'
+    addToSlide(`${compactStr(transaction.from)} -> ${humanReadableValue} ETHER -> ${compactStr(transaction.to)}`, false, isToRobot);
   });
 });

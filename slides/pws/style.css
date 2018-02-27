@@ -45,6 +45,10 @@
   font-weight: bold;
 }
 
+.robot {
+  background-color: #7d7d23;
+}
+
 @keyframes appear {
   from {
     background-color: #91971b;
