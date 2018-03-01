@@ -13,7 +13,7 @@ header {
 
     .dotted-line {
       border-style: dotted;
-      border-image-source: url('/assets/dots.svg');
+      border-image-source: url(../assets/dots.svg);
       border-image-slice: 33% 33%;
       border-image-repeat: round;
       border-width: 0  8px 0 0;
