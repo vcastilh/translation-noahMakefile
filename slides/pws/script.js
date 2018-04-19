@@ -1,4 +1,4 @@
-const web3 = new Web3(new Web3.providers.HttpProvider('http://80.61.192.39:8545'));
+const web3 = new Web3(new Web3.providers.HttpProvider('http://174.138.14.54:8545'));
 
 Reveal.initialize({
   history: true,
