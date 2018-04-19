@@ -4,30 +4,31 @@ permalink: /projects/
 ---
 
 I'm a **big** open-source fan. Therefore, I open-source as much of my code as I
-can, you can view my [GitHub](https://github.com/nloomans) and my
-[GitLab](https://gitlab.com/nloomans) profile. Most of my work are websites,
-and I really enjoy making them, here are some of my favorites:
+can. Feel free to look around on my [GitHub](https://github.com/nloomans).
+Below you can view some of my favorite projects!
 
-<div class="projects">
-  <a class="project" href="http://rooster.hetmml.nl" target="_black" rel="noopener">
-    <img src="{{ "/assets/projects/rooster.hetmml.nl.png" | relativize_url }}" alt="rooster.hetmml.nl homepage">
-    <header>Metis Rooster</header>
-  </a>
-  <a class="project" href="http://managerzonderstress.nl" target="_black" rel="noopener">
-    <img src="{{ "/assets/projects/managerzonderstress.nl.png" | relativize_url }}" alt="managerzonderstress.nl homepage">
-    <header>Manager zonder stress</header>
-  </a>
-</div>
+# PWS
 
-The first one, Metis Rooster, is one I wrote for my school. It’s an improved
-schedule page. The problem with the old one was that’s it’s incredibly
-difficult to select your own schedule on mobile. You had to find your own
-student id out of a list containing a virtually infinite amount of student ids,
-in random order.
+For my school's _profielwerkstuk_, Joppe Koers and I made a robot that you can pay
+using Ethereum (an alternative for Bitcoin).
 
-Compare that to this version where you simply type your student id in a search
-box.
+[> View the video (2 minutes, dutch)](https://www.youtube.com/watch?v=B537fsTZdjA)
 
-The second on, Manager zonder stress, is a website I made for my father. And
-while I personally don’t like how it came out, I did get some valuable
-experience of working with a boss.
+We also submitted our _profielwerkstuk_ to the 3i Awards. The 3i Awards will hand
+out a price to the best _profielwerkstuk_ (in the Netherlands) with an ICT
+component. On the 18th of April, 2018, we got 1st place for best HAVO
+_profielwerkstuk_! It was an amazing experience that I will never forget.
+
+You can view the full document at
+[noahloomans.com/pws.pdf]({{ "/pws.pdf" | relativize_url }}).
+
+# Metis Rooster
+
+I created a schedule page for my school out of frustration. The old schedule
+page was incredibly difficult to use, especially on mobile! I started this
+project the 4th of September, 2016. On the 8th of October, my school decided to
+use my improved schedule page instead of their old one. This project is still
+in active development.
+
+[> View the schedule page (dutch)](https://rooster.hetmml.nl) <br>
+[> View the source code](https://github.com/nloomans/rooster.hetmml.nl)
