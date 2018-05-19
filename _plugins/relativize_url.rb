@@ -1,5 +1,9 @@
 require 'pathname'
 
+def ensure_leading_slash(path)
+  path[0..0] == "/" ? path : "/#{path}"
+end
+
 module Jekyll
   module UrlRelativizer
     def relativize_url(input)
