@@ -4,7 +4,8 @@ permalink: /projects/
 ---
 
 I'm a **big** open-source fan. Therefore, I open-source as much of my code as I
-can. Feel free to look around on my [GitHub](https://github.com/nloomans).
+can. Feel free to look around on my [GitHub](https://github.com/nloomans). I
+also mirror some of my projects at [git.noahloomans.com](https://git.noahloomans.com).
 Below you can view some of my favorite projects!
 
 # PWS
