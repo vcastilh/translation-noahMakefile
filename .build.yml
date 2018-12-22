@@ -3,7 +3,18 @@ packages:
   - jekyll
 sources:
   - https://git.sr.ht/~nloomans/noahloomans.com
+environment:
+  deploy: root@noahloomans.com
+secrets:
+  - a453c7e5-f773-4343-9fe3-ba3bf58492a3
 tasks:
   - build: |
       cd noahloomans.com
-      jekyll build -d dist
+      jekyll build
+  - deploy: |
+      rsync \
+        --rsh='ssh -o StrictHostKeyChecking=no' \
+        --delete \
+        --recursive \
+        --progress \
+        noahloomans.com/_site/. $deploy:/var/www/noahloomans.com/html/
