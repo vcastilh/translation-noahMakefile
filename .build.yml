@@ -1,0 +1,9 @@
+image: debian/stretch
+packages:
+  - jekyll
+sources:
+  - https://git.sr.ht/~nloomans/noahloomans.com
+tasks:
+  - build: |
+      cd noahloomans.com
+      jekyll build -d dist
