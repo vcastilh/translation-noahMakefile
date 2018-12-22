@@ -12,9 +12,16 @@ tasks:
       cd noahloomans.com
       jekyll build
   - deploy: |
-      rsync \
-        --rsh='ssh -o StrictHostKeyChecking=no' \
-        --delete \
-        --recursive \
-        --progress \
-        noahloomans.com/_site/. $deploy:/var/www/noahloomans.com/html/
+      cd noahloomans.com
+      # We only want to deploy when on master. We cain't just check if
+      # --abbrev-ref is master since the HEAD is detached.
+      if [ "$(git rev-parse master)" = "$(git rev-parse HEAD)" ]; then
+        rsync \
+          --rsh='ssh -o StrictHostKeyChecking=no' \
+          --delete \
+          --recursive \
+          --progress \
+          _site/. $deploy:/var/www/noahloomans.com/html/
+      else
+        echo "Not on master, skipping..."
+      fi
