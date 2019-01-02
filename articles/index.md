@@ -6,7 +6,7 @@ Hi,
 
 I'm a programmer, mostly a web developer, but I'm in love with robotics as well.
 I just like to code stuff. Take a look at the [projects page]({{ "/projects/" | relativize_url }}) to see
-the stuff I've been working on. I'm currently a graduated, 18-year-old student at
+the stuff I've been working on. I'm currently a graduated, 19-year-old student at
 [Metis Montessori Lyceum](http://hetmml.nl/), and I currently have a job at
 [Q42](https://www.q42.nl/).
 
