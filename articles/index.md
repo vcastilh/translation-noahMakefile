@@ -7,7 +7,7 @@ Hi,
 I'm a programmer, mostly a web developer, but I'm in love with robotics as well.
 I just like to code stuff. Take a look at the [projects page]({{ "/projects/" | relativize_url }}) to see
 the stuff I've been working on. I'm currently a graduated, 19-year-old student at
-[Metis Montessori Lyceum](https://hetmml.nl/), and I am currently studing at
+[Metis Montessori Lyceum](https://hetmml.nl/), and I am currently studying at
 [Codam Coding College](https://codam.nl/).
 
 # Contact
