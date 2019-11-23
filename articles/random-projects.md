@@ -1,6 +1,7 @@
 ---
 layout: layout
 permalink: /random-projects/
+# No longer linked anywhere, but I kept it as not to break links.
 ---
 
 These are some of the random project I've made:
