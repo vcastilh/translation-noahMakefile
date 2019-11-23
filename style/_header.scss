@@ -51,15 +51,26 @@ header {
       list-style: none;
       margin: 0;
       padding: 0;
+
+      // Prevent newlines from being turned into spaces.
+      font-size: 0;
     }
 
     li {
+      // Don't inherit the no spaces hack from ul.
+      font-size: 1rem;
+
       display: inline;
       padding-left: 0px;
+    }
 
-      &:first-of-type, &:last-of-type {
-        padding-left: 0;
-      }
+    .trailing-comma {
+      display: none;
+    }
+
+    .comma::after {
+      // add one space after each comma to be complient with gofmt.
+      content: " ";
     }
   }
 }
@@ -70,6 +81,13 @@ header {
       li {
         display: list-item;
         padding-left: 20px;
+        &:first-of-type, &:last-of-type {
+          padding-left: 0;
+        }
+      }
+
+      .trailing-comma {
+        display: initial;
       }
     }
     .title {

@@ -14,12 +14,11 @@
     <div class="name">Noah Loomans</div>
     <div class="menu">
       <ul class='no-markdown'>
-        <li>const menu = [</li>
-        <li><a href="{{ "/" | relativize_url }}">'Home'</a>,</li>
-        <li><a href="{{ "/projects/" | relativize_url }}">'Projects'</a>,</li>
-        <li><a href="{{ "/random-projects/" | relativize_url }}">'Random Projects'</a>,</li>
-        <li><a href="{{ "/badges/" | relativize_url }}">'Badges'</a></li>
-        <li>]</li>
+        <li>menu := []string{</li>
+        <li><a href="{{ "/" | relativize_url }}">"Home"</a><span class="comma">,</span></li>
+        <li><a href="{{ "/projects/" | relativize_url }}">"Projects"</a><span class="comma">,</span></li>
+        <li><a href="{{ "/tutorials/" | relativize_url }}">"Tutorials"</a><span class="comma trailing-comma">,</span></li>
+        <li>}</li>
       </ul></div>
   </div>
 </header>
