@@ -245,5 +245,5 @@ less then it should have.
 [my Makefile tutorial]: https://man.sr.ht/~nloomans/makefile/
 
 I hope you found this tutorial useful! I like to integrate valgrind with my
-workflow and run all my tests with valgrind in the middle. It is much easy to
-fix a valgrind error when it appears.
+workflow and run all my tests with valgrind. This way one notices errors
+quicker, making it easier to fix.
