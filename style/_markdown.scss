@@ -35,6 +35,7 @@ code {
 pre {
   background-color: var(--color-pre-code-bg);
   overflow-x: auto;
+  padding: 8px;
 
   code {
     color: inherit;
@@ -42,6 +43,7 @@ pre {
     &::before, &::after {
       display: block;
       content: '```';
+      color: grey;
     }
   }
 }
