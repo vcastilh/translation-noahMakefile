@@ -25,7 +25,7 @@ ul:not(.no-markdown) {
 }
 
 code {
-  color: red;
+  color: var(--color-code);
 
   &::before, &::after {
     content: '`';
@@ -33,11 +33,11 @@ code {
 }
 
 pre {
-  background-color: lightgray;
+  background-color: var(--color-pre-code-bg);
   overflow-x: auto;
 
   code {
-    color: initial;
+    color: inherit;
 
     &::before, &::after {
       display: block;
@@ -47,7 +47,7 @@ pre {
 }
 
 blockquote {
-  color: green;
+  color: var(--color-quote);
   position: relative;
 
   &::before {

@@ -6,6 +6,28 @@ $logo-width: 150px;
 $logo-width-small: 100px;
 $page-padding-between: 40px;
 
+:root {
+  --color-background: #1e1e1e;
+  --color-text: white;
+  --color-link: lightgreen;
+  --color-link-hover-bg: #3e3e3e;
+  --color-code: pink;
+  --color-pre-code-bg: black;
+  --color-quote: lightblue;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-background: white;
+    --color-text: #212121;
+    --color-link: #1a0dab;
+    --color-link-hover-bg: #ececec;
+    --color-code: red;
+    --color-pre-code-bg: lightgrey;
+    --color-quote: green;
+  }
+}
+
 @import 'normalize';
 @import 'header';
 @import 'markdown';
@@ -20,7 +42,8 @@ $page-padding-between: 40px;
 body {
   font-family: 'Roboto Mono', monospace;
   margin: 16px;
-  color: #212121;
+  background-color: var(--color-background);
+  color: var(--color-text);
   word-wrap: break-word;
 }
 
@@ -52,11 +75,11 @@ footer {
 
 a {
   text-decoration: none;
-  color: #1a0dab;
+  color: var(--color-link);
   outline: none;
 
   &:hover, &:focus {
-    background-color: #ececec;
+    background-color: var(--color-link-hover-bg);
   }
 }
 
