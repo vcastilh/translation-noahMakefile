@@ -2,7 +2,7 @@
 layout: layout
 permalink: /tutorials/
 ---
-I like to write tutorials, right now all of these are intendent for fellow
+I like to write tutorials, right now all of these are intended for fellow
 students at [Codam](https://www.codam.nl/) but I may create more general
 tutorials later.
 
