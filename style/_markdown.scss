@@ -23,3 +23,36 @@ ul:not(.no-markdown) {
     content: '\00a0- ';
   }
 }
+
+code {
+  color: red;
+
+  &::before, &::after {
+    content: '`';
+  }
+}
+
+pre {
+  background-color: lightgray;
+  overflow-x: auto;
+
+  code {
+    color: initial;
+
+    &::before, &::after {
+      display: block;
+      content: '```';
+    }
+  }
+}
+
+blockquote {
+  color: green;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    left: -1.5em;
+    content: '> ';
+  }
+}
