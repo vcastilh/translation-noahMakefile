@@ -1,6 +1,6 @@
 ---
 layout: layout
-permalink: /tutorials/docker-valgrind
+permalink: /tutorials/docker-valgrind/
 ---
 
 **STATUS**: DRAFT
