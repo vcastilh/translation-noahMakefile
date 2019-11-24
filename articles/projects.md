@@ -10,8 +10,8 @@ Below you can view some of my favorite projects!
 
 # PWS
 
-For my school's _profielwerkstuk_, Joppe Koers and I made a robot that you can pay
-using Ethereum (an alternative for Bitcoin).
+For my school's _profielwerkstuk_, [Joppe Koers](https://joppekoers.nl/) and I
+made a robot that you can pay using Ethereum (an alternative for Bitcoin).
 
 [> View the video (2 minutes, dutch)](https://www.youtube.com/watch?v=B537fsTZdjA)
 
