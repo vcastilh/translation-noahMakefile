@@ -4,7 +4,6 @@ stdenv.mkDerivation rec {
   src = ./src;
   buildInputs = [
     jekyll
-    rubyPackages_2_6.rouge
   ];
   buildPhase = ''
     jekyll build
