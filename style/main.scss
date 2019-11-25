@@ -1,7 +1,7 @@
 ---
 ---
 
-$page-width: 840px;
+$page-width: 900px;
 $logo-width: 150px;
 $logo-width-small: 100px;
 $page-padding-between: 40px;
@@ -23,7 +23,7 @@ $page-padding-between: 40px;
     --color-link: #1a0dab;
     --color-link-hover-bg: #ececec;
     --color-code: red;
-    --color-pre-code-bg: lightgrey;
+    --color-pre-code-bg: #f8f8f8;
     --color-quote: green;
   }
 }
@@ -34,6 +34,7 @@ $page-padding-between: 40px;
 @import 'responsive';
 @import 'random-project';
 @import 'credly-widget';
+@import 'highlight';
 
 * {
   box-sizing: border-box;

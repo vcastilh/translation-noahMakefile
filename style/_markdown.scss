@@ -1,5 +1,6 @@
 h1, h2, h3 {
-  font-size: 1em;
+  font-size: 1.4em;
+  margin: 32px 0;
   font-weight: bold;
 }
 
@@ -26,6 +27,11 @@ ul:not(.no-markdown) {
 
 code {
   color: var(--color-code);
+  tab-size: 4;
+
+  // tab-size on Firefox is currently unaffected by `letter-spacing`. Since we
+  // don't use `letter-spacing` we can safely apply the prefix.
+  -moz-tab-size: 4;
 
   &::before, &::after {
     content: '`';
@@ -46,6 +52,10 @@ pre {
       color: grey;
     }
   }
+}
+
+.language-makefile code::before {
+  content: '```makefile';
 }
 
 blockquote {
