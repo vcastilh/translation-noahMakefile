@@ -1,6 +1,6 @@
-image: debian/stretch
-packages:
-  - jekyll
+image: nixos/latest
+repositories:
+  nixpkgs: https://nixos.org/channels/nixos-19.09
 sources:
   - https://git.sr.ht/~nloomans/noahloomans.com
 environment:
@@ -10,7 +10,7 @@ secrets:
 tasks:
   - build: |
       cd noahloomans.com
-      jekyll build
+      nix-build
   - deploy: |
       cd noahloomans.com
       # We only want to deploy when on master. We cain't just check if
@@ -21,7 +21,8 @@ tasks:
           --delete \
           --recursive \
           --progress \
-          _site/. $deploy:/var/www/noahloomans.com/html/
+          result/www/. $deploy:/var/www/noahloomans.com/html/
       else
         echo "Not on master, skipping..."
+        find result/www
       fi
