@@ -84,6 +84,11 @@ a {
   }
 }
 
+img.center {
+  display: block;
+  margin: 0 auto;
+}
+
 .grow {
   flex-grow: 1;
 }
