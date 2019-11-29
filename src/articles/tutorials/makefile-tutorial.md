@@ -144,6 +144,29 @@ an optimized production build.
 > *Exercise*: Try to recompile with the `-pedantic` compile flag. Try changing
 > the name of the executable name. Do this without modifying the Makefile.
 
+## Recompiling when your headers change
+
+We are missing one last piece of the puzzle for a really nice Makefile. Right
+now, when you change a header file the object files will not be recompiled.
+This can result in strange errors if you forget to run `make re`. One way to
+solve this is by telling `make` the object files are dependent on the header
+files:
+
+```makefile
+HEADER_FILES = greeter.h
+
+%.o: %.c $(HEADER_FILES)
+	$(CC) -c $(CFLAGS) -o $@ $<
+```
+
+This rule now means that `main.o` is dependent on `main.c` and `greeter.h` and
+`greeter.o` is dependent on `greeter.c` and `greeter.h`. Because `make` will
+run a rule if any of the dependencies are newer then the target, `make` will
+automatically recreate all object files if any header file changes.
+
+> *Exercise*: Why are we using `$<` instead of `$^` here? Why doesn't `$^` work
+> in this situation?
+
 ## Norm compliance
 
 We need a few more rules to get full norm compliance.
@@ -151,6 +174,7 @@ We need a few more rules to get full norm compliance.
 ```makefile
 NAME = foo
 OBJ_FILES = main.o greeter.o
+HEADER_FILES = greeter.h
 CFLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
@@ -158,7 +182,7 @@ all: $(NAME)
 $(NAME): $(OBJ_FILES)
 	$(CC) -o $@ $^
 
-%.o: %.c
+%.o: %.c $(HEADER_FILES)
 	$(CC) -c $(CFLAGS) -o $@ $<
 
 clean:
@@ -222,6 +246,8 @@ on that one later in this document.)
 NAME=foo
 REG_OBJ_FILES = main.o greeter.o
 BONUS_OBJ_FILES = loud_greeter_bonus.o
+HEADER_FILES = greeter.h
+CFLAGS = -Wall -Wextra -Werror
 
 ifdef WITH_BONUS
 OBJ_FILES = $(REG_OBJ_FILES) $(BONUS_OBJ_FILES)
@@ -229,14 +255,12 @@ else
 OBJ_FILES = $(REG_OBJ_FILES)
 endif
 
-CFLAGS = -Wall -Wextra -Werror
-
 all: $(NAME)
 
 $(NAME): $(OBJ_FILES)
 	$(CC) -o $@ $^
 
-%.o: %.c
+%.o: %.c $(HEADER_FILES)
 	$(CC) -c $(CFLAGS) -o $@ $<
 
 clean:
