@@ -8,3 +8,5 @@ tutorials later.
 
  - [Makefile]({{ "/tutorials/makefile" | relativize_url }})
    (last updated: 2019-11)
+ - [Installing Valgrind on Mojave using Docker]({{ "/tutorials/docker-valgrind" | relativize_url }})
+   (last updated: 2019-11)

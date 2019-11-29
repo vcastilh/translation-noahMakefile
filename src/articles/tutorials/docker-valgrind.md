@@ -3,10 +3,6 @@ layout: layout
 permalink: /tutorials/docker-valgrind/
 ---
 
-**STATUS**: DRAFT
-
----
-
 # How to install Valgrind on Mojave using Docker
 
 [Valgrind] is a very useful tool that allows you to spot memory leaks, memory
