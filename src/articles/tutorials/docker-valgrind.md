@@ -9,7 +9,7 @@ permalink: /tutorials/docker-valgrind/
 
 # How to install Valgrind on Mojave using Docker
 
-[Valgrind] is a very useful tool which allows you to spot memory leaks, memory
+[Valgrind] is a very useful tool that allows you to spot memory leaks, memory
 corruptions and other bugs in your program which would have otherwise been
 difficult to find and track down. Here is an example error Valgrind can
 generate:
@@ -31,24 +31,24 @@ crashing your program if you are lucky, and overwriting memory some other code
 uses (thus creating unexplainable behavior) if you are unlucky. If you are
 interested, read on! This tutorial will show you how to install Valgrind.
 
-Unfortunately, valgrind doesn't work in Mojave. You can currently install a
+Unfortunately, Valgrind doesn't work in Mojave. You can currently install a
 [work in progress version which improves support][work in progress] but there
-will be _a lot_ of false positive errors to ignore.
+will be _a lot_ of false-positive errors to ignore.
 
-Instead, I like to run valgrind on Linux instead. The Linux support of valgrind
-is excellent. Unfortunately it does require you to add support for Linux to your
-application. Luckily that doesn't take too time, you mostly need to change a
-few includes (`#ifdef __linux__` is your friend) and fix a few issues that gcc
-finds but clang doesn't.
+Instead, I like to run Valgrind on Linux. The Linux support of Valgrind is
+excellent. This does require you to add support for Linux to your application.
+Luckily that doesn't take too time, you mostly need to change a few includes
+(`#ifdef __linux__` is your friend) and fix a few issues that gcc finds but
+clang doesn't.
 
-So, how does one get a linux environment with valgrind on macOS? One solution
-is to use [Docker]. Docker allows us to quickly get a linux environment and
+How does one get a Linux environment with Valgrind on macOS? One solution
+is to use [Docker]. Docker allows us to quickly get a Linux environment and
 give that environment access to any folder we want.
 
 > The intent of this tutorial is not to give you a foundation in Docker.
 > Instead, this tutorial aims to give you a working Docker setup and get
-> valgrind working. There are [many tutorials] if for if you want to properly
-> learn docker.
+> Valgrind working. There are [many tutorials] if for if you want to properly
+> learn Docker.
 
 [Valgrind]: https://www.valgrind.org/
 [work in progress]: https://github.com/sowson/valgrind
@@ -60,11 +60,11 @@ give that environment access to any folder we want.
 Open up the Managed Software Center and install Docker from there. We do need
 to make a few changes before you launch it.
 
-Docker will download a lot of linux parts and unless you have almost nothing in
-your homefolder it will exceed the 5GB limit. So, instead we will store docker
-in `goinfre`. `goinfre` is a folder which is specific to the current iMac. It
+Docker will download a lot of Linux parts and unless you have almost nothing in
+your home folder it will exceed the 5GB limit. Instead, we will store Docker
+in `goinfre`. `goinfre` is a folder that is specific to the current iMac. It
 does not have artificial limits and is perfect to store Docker in. Because of
-the nature of docker, it doesn't matter that this folder isn't synced between
+the nature of Docker, it doesn't matter that this folder isn't synced between
 iMacs. Docker will transparently download everything it needs when running it
 on a new iMac.
 
@@ -74,7 +74,7 @@ on a new iMac.
 > not synced. The reason we are using `goinfre` instead of `sgoinfre` is that
 > Docker requires locks, which `sgoinfre` does not provide.
 
-First, we want to create a folder inside of goinfre to store docker in. I like
+First, we want to create a folder inside of goinfre to store Docker in. I like
 to create `~/goinfre/docker` folder using `mkdir -p ~/goinfre/docker`. I would
 recommend you to place that `mkdir` command inside of your `~/.zshrc` (or, even
 better, set it to [run at startup]). Once created, we want to symlink
@@ -87,7 +87,7 @@ ln -s ~/goinfre/docker ~/Library/Containers/com.docker.docker
 
 [run at startup]: https://stackoverflow.com/c/42network/a/75/521
 
-Now, we can launch Docker. An docker indicator will be visible in the top
+Now, we can launch Docker. A Docker indicator will be visible in the top
 right. Open the menu and wait for a green dot with the text
 "Docker is running".
 
@@ -101,7 +101,7 @@ $ docker ps
 CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
 ```
 
-Let's test it out, run the follow command to get a Debian Linux shell:
+Let's test it out, run the following command to get a Debian Linux shell:
 
 ```
 $ docker run -it --rm debian bash
@@ -114,12 +114,12 @@ root@25abf8583df7:/# uname
 Linux
 ```
 
-Here I asked docker to run `bash` in `debian`. We want it to be
+Here I asked Docker to run `bash` in `debian`. We want it to be
 interactive `-i` so bash doesn't immediately quit because there is no input.
 And we want a pty `-t` so that bash shows us a prompt. We also want to delete
-the container on exit `--rm` so it doesn't waist space
+the container on exit `--rm` so it doesn't waste space
 
-Since debian wasn't already downloaded, docker will download it for us. If we
+Since Debian wasn't already downloaded, Docker will download it for us. If we
 execute it again `debian` won't be re-downloaded.
 
 ```
@@ -127,16 +127,16 @@ $ docker run -it --rm debian bash
 root@737c30c2ccff:/#
 ```
 
-The automatic redownloading is why it makes perfect sense to store docker
+The automatic redownloading is why it makes perfect sense to store Docker
 in `goinfre`. Think of `~/goinfre/docker` more like a cache then something you
 need to take care of.
 
-## Accessing our project within docker.
+## Accessing our project within Docker.
 
 [docker-run(1)] has a nice `-v` option, which allows us to mount a specific
-folder from the host to the docker container. Let's try to open a folder in
-docker. I store my `ft_ls` in `~/archive/42/ft_ls`. To get access to that
-folder within docker I would run the following command:
+folder from the host to the Docker container. Let's try to open a folder in
+Docker. I store my `ft_ls` in `~/archive/42/ft_ls`. To get access to that
+folder within Docker I would run the following command:
 
 ```
 $ docker run -it --rm -v ~/archive/42/ft_ls:/ft_ls debian bash
@@ -159,11 +159,12 @@ root@7c98e8ff00b5:/ft_ls# make
 bash: make: command not found
 ```
 
-To save space, the `debian` docker container is _very_ minimal. Anything extra
+To save space, the `debian` Docker container is _very_ minimal. Anything extra
 can be installed manually using `apt-get`. You don't want to reinstall the
-required program every time you open a container, so instead I created an image
-with the required package pre-installed. The image is called `nloomans/codam`
-and has `gcc`, `clang`, `make`, `valgrind`, and [criterion] preinstalled.
+required program every time you open a container, so instead, I created an
+image with the required package pre-installed. The image is called
+`nloomans/codam` and has `gcc`, `clang`, `make`, `valgrind`, and [criterion]
+preinstalled.
 
 [criterion]: https://github.com/Snaipe/Criterion
 
@@ -214,7 +215,7 @@ drwxr-xr-x 2 docker http   4096 Oct 16 20:11 src
 ==1216== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 ```
 
-And valgrind works! Here is how it looks if valgrind find an error:
+And Valgrind works! Here is how it looks if Valgrind finds an error:
 
 ```
 [root@f9d2ea415ac3 ft_ls]# valgrind ./ft_ls
@@ -286,16 +287,16 @@ tester
 
 ## Handy alias
 
-Instead of typing `docker run -it --rm -v ~/archive/42/ft_ls:/ft_ls nloomans/codam`
-again and again I like to use the following alias I wrote:
+Instead of typing `docker run -it --rm -v ~/archive/42/ft_ls:/ft_ls nloomans/codam`,
+again and again, I like to use the following alias I wrote:
 
 ```
 alias docker-pwd='docker run -it --rm --init -v "$PWD:/pwd" nloomans/codam sh -c "cd /pwd; bash"'
 ```
 
 This will allow me to run `docker-pwd` anywhere, and it will create a new
-docker container, mount my current working directory in it, and `cd` to the
-correct location in the docker contianer for me. (Yes I'm lazy)
+Docker container, mount my current working directory in it, and `cd` to the
+correct location in the Docker container for me. (Yes I'm lazy)
 
 > *Hint*: Try to integrate `valgrind` in your workflow. Regularly run your code
 > trough Valgrind instead of waiting for errors to become visible first.
