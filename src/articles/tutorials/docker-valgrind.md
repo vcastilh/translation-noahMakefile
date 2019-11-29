@@ -34,8 +34,10 @@ will be _a lot_ of false-positive errors to ignore.
 Instead, I like to run Valgrind on Linux. The Linux support of Valgrind is
 excellent. This does require you to add support for Linux to your application.
 Luckily that doesn't take too time, you mostly need to change a few includes
-(`#ifdef __linux__` is your friend) and fix a few issues that gcc finds but
+([`#ifdef __linux__` is your friend][ifdef]) and fix a few issues that gcc finds but
 clang doesn't.
+
+[ifdef]: https://git.sr.ht/~nloomans/minishell/tree/2a05412dd738b8f4fd3094cf44098b350252b95f/src/builtin/cd.c#L15
 
 How does one get a Linux environment with Valgrind on macOS? One solution
 is to use [Docker]. Docker allows us to quickly get a Linux environment and
