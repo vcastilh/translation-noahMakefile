@@ -55,6 +55,10 @@ give that environment access to any folder we want.
 
 ## How to install Docker
 
+_Non-[Codam] students can [skip a bit](#non-codam-skip)._
+
+[Codam]: https://www.codam.nl/en/
+
 Open up the Managed Software Center and install Docker from there. We do need
 to make a few changes before you launch it.
 
@@ -85,9 +89,9 @@ ln -s ~/goinfre/docker ~/Library/Containers/com.docker.docker
 
 [run at startup]: https://stackoverflow.com/c/42network/a/75/521
 
-Now, we can launch Docker. A Docker indicator will be visible in the top
-right. Open the menu and wait for a green dot with the text
-"Docker is running".
+<span id="non-codam-skip">Now, we can launch Docker.</span> A Docker indicator
+will be visible in the top right. Open the menu and wait for a green dot with
+the text "Docker is running".
 
 <img class="center" src="{{ "/assets/tutorials/docker-valgrind/docker-popup.png" | relativize_url }}" height="300">
 
