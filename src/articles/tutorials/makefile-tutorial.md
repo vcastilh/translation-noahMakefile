@@ -14,8 +14,8 @@ Codam peers write better Makefiles. Feedback welcome!
 When evaluating peers, I see many Makefiles which look something like this:
 
 ```makefile
-SRCS = ft_bar.c ft_baz.c
 NAME = ft_foo
+SRCS = ft_bar.c ft_baz.c
 FLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
@@ -43,7 +43,7 @@ we will worry about that later.
 
 Clone this repository containing an example project:
 
-```sh
+```
 git clone https://git.sr.ht/~nloomans/makefile-tutorial
 ```
 
@@ -96,7 +96,7 @@ dependencies while `$<` will only get the first one.
 Let's modify the `Makefile`. The new contents will look like this:
 
 ```makefile
-NAME=foo
+NAME = foo
 OBJ_FILES = main.o greeter.o
 CFLAGS = -Wall -Wextra -Werror
 
@@ -149,7 +149,7 @@ an optimized production build.
 We need a few more rules to get full norm compliance.
 
 ```makefile
-NAME=foo
+NAME = foo
 OBJ_FILES = main.o greeter.o
 CFLAGS = -Wall -Wextra -Werror
 
@@ -273,5 +273,5 @@ we can do now.
 
 ---
 
-That was it! Please send any errors, questions, and improvements to `nloomans`
+That was it! Please send any errors, questions, and improvements to nloomans
 on slack.

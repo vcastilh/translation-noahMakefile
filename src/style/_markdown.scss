@@ -32,10 +32,6 @@ code {
   // tab-size on Firefox is currently unaffected by `letter-spacing`. Since we
   // don't use `letter-spacing` we can safely apply the prefix.
   -moz-tab-size: 4;
-
-  &::before, &::after {
-    content: '`';
-  }
 }
 
 pre {
@@ -45,17 +41,19 @@ pre {
 
   code {
     color: inherit;
+  }
+}
 
-    &::before, &::after {
-      display: block;
-      content: '```';
-      color: grey;
-    }
+[class^="language-"] code {
+  &::before, &::after {
+    display: block;
+    content: '```';
+    color: grey;
   }
 }
 
 .language-makefile code::before {
-  content: '```makefile';
+  content: '```Makefile';
 }
 
 blockquote {
