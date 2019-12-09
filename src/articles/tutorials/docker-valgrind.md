@@ -93,7 +93,7 @@ ln -s ~/goinfre/docker ~/Library/Containers/com.docker.docker
 will be visible in the top right. Open the menu and wait for a green dot with
 the text "Docker is running".
 
-<img class="center" src="{{ "/assets/tutorials/docker-valgrind/docker-popup.png" | relativize_url }}" height="300">
+<img class="center" src="/assets/tutorials/docker-valgrind/docker-popup.png" height="300">
 
 Open a terminal and type `docker ps`. If you get the
 following output you did it correctly:
@@ -284,7 +284,7 @@ tester
 > *Hint*: Don't know what an error means? Paste the first line into your
 > [favorite search engine]!
 
-[my Makefile tutorial]: {{ "/tutorials/makefile" | relativize_url }}
+[my Makefile tutorial]: /tutorials/makefile
 [favorite search engine]: https://duckduckgo.com/
 
 ## Handy alias

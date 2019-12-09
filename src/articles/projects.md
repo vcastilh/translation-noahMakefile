@@ -21,7 +21,7 @@ component. On the 18th of April, 2018, we got 1st place for best HAVO
 _profielwerkstuk_! It was an amazing experience that I will never forget.
 
 You can view the full document at
-[noahloomans.com/pws.pdf]({{ "/pws.pdf" | relativize_url }}).
+[noahloomans.com/pws.pdf](/pws.pdf).
 
 # Metis Rooster
 
