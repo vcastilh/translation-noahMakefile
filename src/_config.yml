@@ -2,3 +2,6 @@ include: [".well-known"]
 markdown: kramdown
 sass:
     sass_dir: style
+
+email: inbox@noahloomans.com
+email_markdown: "[inbox@noahloomans.com](mailto:inbox@noahloomans.com)"
