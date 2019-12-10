@@ -84,7 +84,7 @@ let movies = [
 	},
 	{
 		title: "V for Vendetta",
-		description: "The Tramp struggles to live in modern industrial society with the help of a young homeless woman.",
+		description: "In a future British tyranny, a shadowy freedom fighter, known only by the alias of "V", plots to overthrow it with the help of a young woman.",
 		info: "https://www.imdb.com/title/tt0434409/", trailer: "https://youtu.be/lSA7mAHolAw",
 		img: "https://m.media-amazon.com/images/M/MV5BYzllMjJkODAtYjMwMi00YmNhLWFhYzAtZjZjODg5YzEwOGUwXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UY268_CR0,0,182,268_AL_.jpg"
 	},
