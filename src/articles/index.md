@@ -9,7 +9,7 @@ webapps, and learning how stuff really works. Oh, and I'm in love with
 robotics. I'm currently studying at [Codam Coding College](https://www.codam.nl/)
 and I went to high school at the awesome [Metis Montessori Lyceum](https://hetmml.nl/).
 
-- age: 19
+- age: 20
 - location: Amsterdam
 - languages: Dutch, English
 
