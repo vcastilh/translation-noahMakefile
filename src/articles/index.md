@@ -18,5 +18,12 @@ If you wish to contact me please send me an email at the following address:
 
 > {{ site.email_markdown }}
 
+You can also find me on
+<a rel="me" href="https://mastodon.technology/@nloomans">Mastodon</a> and
+[Twitter](https://twitter.com/noahloomans/).
+
+<!-- The rel="me" causes Mastodon to verify this website as my official
+website. -->
+
 You can find my PGP key on [keybase](https://keybase.io/nloomans) (the
 fingerprint is _67B0 295A C271 345D 0706  4B9B 8B23 75F3 B367 DF6D_).
