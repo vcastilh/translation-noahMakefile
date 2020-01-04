@@ -7,7 +7,13 @@ I like to write tutorials, right now all of these are intended for fellow
 students at [Codam](https://www.codam.nl/) but I may create more general
 tutorials later.
 
- - [Makefile](/tutorials/makefile)
-   (last updated: 2019-11)
- - [Installing Valgrind on Mojave using Docker](/tutorials/docker-valgrind)
-   (last updated: 2019-11)
+{% for post in site.posts %}
+  <h1>
+    <a href="{{ post.url }}">{{ post.title }}</a>
+    <span class="date">{{ post.date | date: "%Y-%m-%d" }}</span>
+  </h1>
+  <div class="excerpt">
+    {{ post.excerpt }}
+  </div>
+  <p><a href="{{ post.url }}">View tutorial</a></p>
+{% endfor %}

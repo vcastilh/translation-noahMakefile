@@ -1,10 +1,8 @@
 ---
-layout: layout
-permalink: /tutorials/docker-valgrind/
-title: How to install Valgrind on Mojave using Docker
+layout: post
+title: Valgrind on Mojave using Docker
+categories: [tutorials]
 ---
-
-# How to install Valgrind on Mojave using Docker
 
 [Valgrind] is a very useful tool that allows you to spot memory leaks, memory
 corruptions and other bugs in your program which would have otherwise been

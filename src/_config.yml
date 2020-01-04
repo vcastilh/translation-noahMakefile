@@ -5,3 +5,11 @@ sass:
 
 email: inbox@noahloomans.com
 email_markdown: "[inbox@noahloomans.com](mailto:inbox@noahloomans.com)"
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      permalink: /:categories/:title/

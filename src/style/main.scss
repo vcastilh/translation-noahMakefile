@@ -97,3 +97,18 @@ img.center {
 .grow {
   flex-grow: 1;
 }
+
+.date {
+  color: grey;
+
+  &::before {
+    content: '[';
+  }
+  &::after {
+    content: ']';
+  }
+}
+
+.excerpt {
+  color: var(--color-quote);
+}

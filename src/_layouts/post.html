@@ -1,0 +1,21 @@
+---
+---
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+  <body>
+    {% include header.html %}
+    <div class="page">
+      <main>
+        <div class="markdown">
+          <h1>
+            {{ page.title }}
+            <span class="date">{{ page.date | date: "%Y-%m-%d" }}</span>
+          </h1>
+          {{ content }}
+        </div>
+      </main>
+    </div>
+    {% include footer.html %}
+  </body>
+</html>
