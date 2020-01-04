@@ -1,6 +1,7 @@
 ---
 layout: layout
 permalink: /projects/
+title: Projects
 ---
 
 I'm a _big_ open-source fan. Therefore, I open-source as much of my code as I

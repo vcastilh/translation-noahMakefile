@@ -1,6 +1,10 @@
 <head>
   <meta charset="utf-8">
-  <title>Noah Loomans</title>
+  {% if page.title %}
+    <title>{{ page.title }} - Noah Loomans</title>
+  {% else %}
+    <title>Noah Loomans</title>
+  {% endif %}
   <meta name="theme-color" content="#ffffff">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="/style/main.css">

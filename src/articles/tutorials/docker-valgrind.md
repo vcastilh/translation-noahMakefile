@@ -1,6 +1,7 @@
 ---
 layout: layout
 permalink: /tutorials/docker-valgrind/
+title: How to install Valgrind on Mojave using Docker
 ---
 
 # How to install Valgrind on Mojave using Docker
