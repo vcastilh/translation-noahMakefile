@@ -302,8 +302,3 @@ correct location in the Docker container for me. (Yes I'm lazy)
 > *Hint*: Try to integrate `valgrind` in your workflow. Regularly run your code
 > trough Valgrind instead of waiting for errors to become visible first.
 > This way one notices errors quicker, making them easier to fix.
-
----
-
-I hope you found this tutorial useful! Please send any errors, questions, and
-improvements to nloomans on slack.

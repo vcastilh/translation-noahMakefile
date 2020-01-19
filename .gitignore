@@ -2,3 +2,4 @@ _site
 .sass-cache
 .jekyll-metadata
 .jekyll-cache
+/src/_includes/openring.out.html

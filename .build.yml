@@ -8,6 +8,9 @@ environment:
 secrets:
   - a453c7e5-f773-4343-9fe3-ba3bf58492a3
 tasks:
+  - openring: |
+      cd noahloomans.com
+      nix-shell --run contrib/openring
   - build: |
       cd noahloomans.com
       nix-build

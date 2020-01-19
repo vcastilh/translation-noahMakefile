@@ -1,68 +1,70 @@
-h1, h2, h3 {
-  font-size: 1.4em;
-  margin: 32px 0;
-  font-weight: bold;
-}
-
-h1::before {
-  content: '# ';
-}
-
-h2::before {
-  content: '## ';
-}
-
-h3::before {
-  content: '### ';
-}
-
-ul:not(.no-markdown) {
-  list-style-type: none;
-  padding-left: 0;
-
-  li::before {
-    content: '\00a0- ';
+.markdown {
+  h1, h2, h3 {
+    font-size: 1.4em;
+    margin: 32px 0;
+    font-weight: bold;
   }
-}
 
-code {
-  color: var(--color-code);
-  tab-size: 4;
+  h1::before {
+    content: '# ';
+  }
 
-  // tab-size on Firefox is currently unaffected by `letter-spacing`. Since we
-  // don't use `letter-spacing` we can safely apply the prefix.
-  -moz-tab-size: 4;
-}
+  h2::before {
+    content: '## ';
+  }
 
-pre {
-  background-color: var(--color-pre-code-bg);
-  overflow-x: auto;
-  padding: 8px;
+  h3::before {
+    content: '### ';
+  }
+
+  ul:not(.no-markdown) {
+    list-style-type: none;
+    padding-left: 0;
+
+    li::before {
+      content: '\00a0- ';
+    }
+  }
 
   code {
-    color: inherit;
+    color: var(--color-code);
+    tab-size: 4;
+
+    // tab-size on Firefox is currently unaffected by `letter-spacing`. Since we
+    // don't use `letter-spacing` we can safely apply the prefix.
+    -moz-tab-size: 4;
   }
-}
 
-[class^="language-"] code {
-  &::before, &::after {
-    display: block;
-    content: '```';
-    color: grey;
+  pre {
+    background-color: var(--color-pre-code-bg);
+    overflow-x: auto;
+    padding: 8px;
+
+    code {
+      color: inherit;
+    }
   }
-}
 
-.language-makefile code::before {
-  content: '```Makefile';
-}
+  [class^="language-"] code {
+    &::before, &::after {
+      display: block;
+      content: '```';
+      color: grey;
+    }
+  }
 
-blockquote {
-  color: var(--color-quote);
-  position: relative;
+  .language-makefile code::before {
+    content: '```Makefile';
+  }
 
-  &::before {
-    position: absolute;
-    left: -1.5em;
-    content: '> ';
+  blockquote {
+    color: var(--color-quote);
+    position: relative;
+
+    &::before {
+      position: absolute;
+      left: -1.5em;
+      content: '> ';
+    }
   }
 }

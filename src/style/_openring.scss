@@ -1,0 +1,30 @@
+.openring {
+  margin-top: 32px;
+
+  .articles {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -0.5rem;
+  }
+  .title {
+    margin: 0;
+  }
+  .article {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    background: var(--color-block);
+    min-width: 10rem;
+  }
+  .summary {
+    font-size: 0.8rem;
+    flex: 1 1 0;
+  }
+  .attribution {
+    text-align: right;
+    font-size: 0.8rem;
+    color: var(--color-aside);
+  }
+}
