@@ -12,12 +12,55 @@ reverse-chronological order (newest first).
 
 # Codam
 
-I have written many [Codam](https://www.codam.nl/en/) projects. These are some of
-the biggest projects I worked on:
+I have written many [Codam](https://www.codam.nl/en/) projects. These are some
+of the biggest projects I worked on:
+
+## ft_select (2020-02-06)
+
+The solo-project `ft_select` was about creating a TUI-option selection menu. It
+would allow you to select multiple options from a list using your keyboard from
+within a shell. It would then communicate the selected options to the parent
+process using stdout.
+
+<video muted controls>
+	<source src="/assets/projects/ft_select.mp4" type="video/mp4">
+</video>
+
+The catch of this project was that we weren't allowed to use
+[ncurses](https://en.wikipedia.org/wiki/Ncurses). That would make it to easy.
+Instead, we needed to use [termcap](https://en.wikipedia.org/wiki/Termcap)
+directly. libtermcap is an ancient library before terminal emulators existed and
+before every terminal emulator used the
+[vt100](https://en.wikipedia.org/wiki/VT100) control codes.
+
+I have written `ft_select` so that it makes no assumptions about the
+capabilities of the terminal. In fact, it is fully functional even when it can't
+find information about the terminal[^1] and it therefor isn't allowed to send
+escape sequences. (Although it won't look as nice.)
+
+> [Source-code on sourcehut](https://git.sr.ht/~nloomans/ft_select/)
+
+[^1]: [See this StackOverflow question where a user has this problem.](https://stackoverflow.com/questions/12345675/screen-cannot-find-terminfo-entry-for-xterm-256color)
+
+## minishell (2019-12-03)
+
+`minishell` is a project where we needed to implement a small subset of a
+POSIX shell. Later Codam projects will elaborate on this where we need to create
+increasingly complex shells. I wrote this project together with Devanando
+Kroeke. It was a nice project where we learned quite a bit about shell
+internals.
+
+We focused a lot on the code quality and commit quality of minishell.
+Especially with commits I tried my best to make small, self contained, and
+context-filling commits. Some examples would be commit
+[ba57be4e](https://gitlab.com/Devanando/minishell/-/commit/ba57be4e05bfe87a0c338ee8d9b0cc30de088ac7)
+and [cff93e34](https://gitlab.com/Devanando/minishell/-/commit/cff93e34e0ae3806f5d55b9765c3375d1a9d7d6a).
+
+> [Source-code on GitLab](https://gitlab.com/Devanando/minishell)
 
 ## ft_ls (2019-10-03)
 
-This project required us to create our implementation of `ls` in C. I wrote
+This project required us to create our own implementation of `ls` in C. I wrote
 this project together with Devanando Kroeke. He is a great teammate who valued
 good workflows as much as I do. `ft_ls` was harder to test
 compared to `ft_printf` because of the sheer amount of system calls that are
@@ -27,8 +70,8 @@ structs. Then giving these structs to the testable code to handle. This allowed
 us to write unit tests for almost all of the complex logic on `ft_ls` (there is
 more then you would expect!)
 
-We based our implementation on the [POSIX ls standard], which surprised us
-about quite a few details. Did you know that `ls sym_link_to_dir` lists the
+We based our implementation on the [POSIX ls standard]. Quit a few details of
+which surprised us. Did you know that `ls sym_link_to_dir` lists the
 dir contents, while `ls -l sym_link_to_dir` lists the symlink itself?
 
 [POSIX ls standard]: https://pubs.opengroup.org/onlinepubs/9699919799/utilities/ls.html
@@ -94,3 +137,5 @@ the same packages are installed on the server as on my local machine.
 > [View the schedule page (dutch)](https://rooster.hetmml.nl)
 
 > [View the source code](https://github.com/nloomans/rooster.hetmml.nl)
+
+---
