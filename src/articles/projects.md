@@ -5,10 +5,10 @@ title: Projects
 ---
 
 I'm a _big_ open-source fan. Therefore, I open-source as much of my code as I
-can. Feel free to look around on my [GitHub](https://github.com/nloomans),
-[GitLab](https://gitlab.com/nloomans) and [sourcehut](https://git.sr.ht/~nloomans).
-Below you can view some of my favorite projects! They are listed in
-reverse-chronological order (newest first).
+can. Feel free to look around on my [sourcehut](https://git.sr.ht/~nloomans),
+[GitHub](https://github.com/nloomans), and
+[GitLab](https://gitlab.com/nloomans). Below you can view some of my favorite
+projects! They are listed in reverse-chronological order (newest first).
 
 # Codam
 
