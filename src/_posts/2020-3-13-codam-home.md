@@ -47,8 +47,8 @@ environment.
 
 [WSL]: https://docs.microsoft.com/en-us/windows/wsl/install-win10
 
-I recommend Ubuntu for new Linux users. First, you probably want to install Git
-and the `build-essential` package.
+I recommend Ubuntu for new Linux users. First, you want to install Git and the
+`build-essential` package.
 
 ```
 sudo apt install git build-essential
