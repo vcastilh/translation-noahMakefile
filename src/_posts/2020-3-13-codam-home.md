@@ -11,8 +11,8 @@ I would create a quick guide.
 ## Collaboration
 
 In order to collaborate with your peers, screen sharing could be useful. For
-this you can use the "Start a call" button at the top right of any slack
-channel. Anyone who is in that channel can join your call. One person can share
+this, you can use the "Start a call" button at the top right of any slack
+channel. Anyone who is on that channel can join your call. One person can share
 their screen at a time and everyone can draw on that screen to e.g. point to
 code.
 
@@ -67,7 +67,7 @@ If your makefile uses the `$(CC)` variable instead of calling `gcc` or `clang`
 directly, you can choose which compiler to use by setting the `CC` environment
 variable. See my [Makefile tutorial](/tutorials/makefile) for details.
 
-In some cases the Linux code and macOS code need to be different. For this you
+In some cases, the Linux code and macOS code need to be different. For this you
 can use the `#ifdef` statement. For example, if you want `PATH_MAX` you need to
 include it like this:
 
