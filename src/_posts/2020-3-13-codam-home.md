@@ -13,7 +13,7 @@ I would create a quick guide.
 In order to collaborate with your peers, screen sharing could be useful. For
 this you can use the "Start a call" button at the top right of any slack
 channel. Anyone who is in that channel can join your call. One person can share
-their screen at a time and everyone call draw on that screen to e.g. point to
+their screen at a time and everyone can draw on that screen to e.g. point to
 code.
 
  > [More info](https://slack.com/intl/en-nl/help/articles/115003498363-Slack-Calls--the-basics)
