@@ -55,12 +55,12 @@ sudo apt install git build-essential
 ```
 
 `build-essential` contains all the required tools to compile C code on Linux.
-You may also choose to use the `clang` compile instead of `gcc`, which will give
+You may also choose to use the `clang` compiler instead of `gcc`, which will give
 more similar error messages to what we use at Codam. To do so, install the
-`llvm-defaults` package to get `clang` and related tools.
+`clang` and `lldb` packages.
 
 ```
-sudo apt install llvm-defaults
+sudo apt install clang lldb
 ```
 
 If your makefile uses the `$(CC)` variable instead of calling `gcc` or `clang`
