@@ -1,7 +1,0 @@
-#!/bin/sh
-exec openring \
-  -s https://drewdevault.com/feed.xml \
-  -s https://sourcehut.org/blog/index.xml \
-  -s https://blog.golang.org/feed.atom \
-  < $(dirname $0)/../src/_includes/openring.in.html \
-  > $(dirname $0)/../src/_includes/openring.out.html
