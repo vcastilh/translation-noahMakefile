@@ -56,6 +56,9 @@
   .language-makefile code::before {
     content: '```Makefile';
   }
+  .language-sh code::before {
+    content: '```sh';
+  }
 
   blockquote {
     color: var(--color-quote);
