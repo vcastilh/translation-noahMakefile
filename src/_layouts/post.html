@@ -7,6 +7,11 @@
     {% include header.html %}
     <div class="page">
       <main>
+        {% if page.unlisted %}
+        <p class="notice">
+          <strong>Pppst!</strong> You are viewing an unlisted article. Do not share it with others.
+        </p>
+        {% endif %}
         <div class="markdown">
           <h1>
             {{ page.title }}
