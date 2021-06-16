@@ -8,6 +8,10 @@ environment:
 secrets:
   - a453c7e5-f773-4343-9fe3-ba3bf58492a3
 tasks:
+  - tutorial_makefile_repo: |
+      mkdir -p noahloomans.com/src/tutorials
+      git clone --bare https://git.sr.ht/~nloomans/noahloomans.com-tutorials-makefile noahloomans.com/src/tutorials/makefile
+      git -C noahloomans.com/src/tutorials/makefile update-server-info
   - build: |
       cd noahloomans.com
       nix-build
