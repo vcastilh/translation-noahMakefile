@@ -16,6 +16,8 @@ $page-padding-between: 40px;
   --color-pre-code-bg: black;
   --color-quote: lightblue;
   --color-aside: #757575;
+  --color-success: mediumspringgreen;
+  --color-failure: #ee4444;
 }
 
 @media (prefers-color-scheme: light) {
@@ -29,6 +31,8 @@ $page-padding-between: 40px;
     --color-pre-code-bg: #f8f8f8;
     --color-quote: purple;
     --color-aside: #757575;
+    --color-success: forestgreen;
+    --color-failure: #db1414;
   }
 }
 
