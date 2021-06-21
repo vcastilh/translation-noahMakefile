@@ -2,21 +2,22 @@
 
 This website is written using [jekyll](https://jekyllrb.com/).
 
-To build the website get the [nix](https://nixos.org/nix/) package manager and
-run:
+[Install it](https://repology.org/project/ruby:jekyll/packages) from your
+package manager or get the project dependencies using
+[nix](https://nixos.org/nix/).
 
-```nix-build```
+## Development
 
-The static html output should now be stored in `result/www`.
+For local testing of the site, run
 
-To get an localhost dev environment, run the following:
+```sh
+jekyll servce -s src --livereload # if you installed jekyll system-wide
 
-```nix-shell --run 'jekyll serve -s src'```
+nix-shell --run 'jekyll serve -s src --livereload' # if you got nix
+```
 
-You can also manually install [jekyll], but the output might be
-different and slightly broken.
+## Publish
 
-[jekyll]: https://jekyllrb.com/
-
-All code pushed to master will automatically be build and pushed to the server.
-See `.build.yml` for details.
+Everything pushed to the master branch of
+[my repo](https://git.sr.ht/~nloomans/noahloomans.com) will automatically be
+build and published, see the `.build.yml` file for details.
