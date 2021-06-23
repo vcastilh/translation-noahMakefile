@@ -76,17 +76,17 @@ footer {
 
   a {
     color: inherit;
-    &:hover, &:focus {
-      background-color: inherit;
-      text-decoration: underline;
+  }
+
+  &:hover {
+    a {
+      color: var(--color-link);
     }
   }
 }
 
 a {
-  text-decoration: none;
   color: var(--color-link);
-  outline: none;
 
   &:hover, &:focus {
     background-color: var(--color-link-hover-bg);
@@ -115,10 +115,6 @@ img.center {
   &::after {
     content: ']';
   }
-}
-
-.excerpt {
-  color: var(--color-quote);
 }
 
 .notice {

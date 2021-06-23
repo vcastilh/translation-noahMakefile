@@ -13,9 +13,6 @@ tutorials later.
     <a href="{{ post.url }}">{{ post.title }}</a>
     <span class="date">{{ post.date | date: "%Y-%m-%d" }}</span>
   </h1>
-  <div class="excerpt">
-    {{ post.excerpt }}
-  </div>
-  <p><a href="{{ post.url }}">View tutorial</a></p>
+  {{ post.excerpt }}
 {% endif %}
 {% endfor %}
