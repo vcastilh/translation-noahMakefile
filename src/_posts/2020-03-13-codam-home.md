@@ -2,6 +2,7 @@
 layout: post
 title: How to work from home, Codam edition.
 categories: [tutorials]
+lang: en
 ---
 
 The Codam staff has recommended everyone to work from home if possible. Because

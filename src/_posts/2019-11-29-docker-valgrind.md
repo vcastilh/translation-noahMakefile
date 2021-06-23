@@ -2,6 +2,7 @@
 layout: post
 title: Valgrind on Mojave using Docker
 categories: [tutorials]
+lang: en
 ---
 
 [Valgrind] is a very useful tool that allows you to spot memory leaks, memory
